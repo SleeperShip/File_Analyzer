@@ -44,7 +44,20 @@ public class Main {
             }
             
             if ("--KMP".equals(args[1])) {
-                //stuff
+                long begin = System.nanoTime();
+                
+                boolean found = naiveStringSearch(byteString, args[2]);
+                
+                long end = System.nanoTime();
+                long time = (end - begin) / 1_000_000_000;
+                
+                if (found == true) {
+                    System.out.println("PDF document");
+                    System.out.println("It took %f seconds", time);
+                } else {
+                    System.out.println("Unknown file type");
+                    System.out.println("It took %f seconds", time); 
+                }
             } else {
                 System.out.println("Unknown algorithm type");
             }
