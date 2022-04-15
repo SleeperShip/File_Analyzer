@@ -1,8 +1,8 @@
 class KMP_String_Matching {
     
     static boolean KMPSearch(String pattern, String txt) {
-        int pattLen = pattern.length();   //M
-        int txtLen = txt.length();   //N
+        int pattLen = pattern.length(); 
+        int txtLen = txt.length();  
   
         // create lps[] that will hold the longest
         // prefix suffix values for pattern
